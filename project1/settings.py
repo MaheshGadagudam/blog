@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'social',
+    'crispy_forms',
+    'crispy_bootstrap4',
+    'dashboards',
 ]
 
 MIDDLEWARE = [
@@ -65,6 +68,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'blog.context_processor.get_categories',
+                'blog.context_processor.get_social_links',
             ],
         },
     },
@@ -131,3 +135,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL='/media/'
 MEDIA_ROOT=BASE_DIR/'media'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
